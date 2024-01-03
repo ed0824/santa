@@ -20,11 +20,12 @@ def matching(people):
         for i in range(0, len(first_random)):
             if first_random[i] == people[i]:
                 undone_match_list.append(first_random[i])
+                break
         if not undone_match_list:
             flag = False
             for k in range(0, len(first_random)):
                 snata_dict.setdefault(first_random[k], people[k])
-
+    print(snata_dict)
     return snata_dict
 
 
@@ -76,4 +77,3 @@ if __name__ == '__main__':
         logError('__main__: {}'.format(str(e)))
 
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
